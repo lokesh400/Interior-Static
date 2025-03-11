@@ -71,8 +71,9 @@ const Upload = {
     }
   },
 };
+const methodOverride = require('method-override');
 
-
+app.use(methodOverride('_method')); 
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -106,13 +107,19 @@ function isAdmin(req, res, next) {
 const userrouter = require("./routes/user.js");
 const otprouter = require("./routes/otp.js");
 const queryrouter = require("./routes/enquiry.js");
+const projectrouter = require("./routes/projects.js");
 
 app.use("/user",userrouter);
 app.use("/user",otprouter);
 app.use("/",queryrouter);
+app.use("/",projectrouter);
 
 app.get("/", async (req,res)=>{
   res.render('index.ejs');
+})
+
+app.get("/admin", async (req,res)=>{
+  res.render('admin/adminIndex.ejs');
 })
 
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

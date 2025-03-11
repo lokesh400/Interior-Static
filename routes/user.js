@@ -75,11 +75,10 @@ router.post('/signup', async (req, res) => {
 
 // Login route
 router.get("/login", (req, res) => {
-    if(req.user){
-        res.redirect('/')
+    if (req.user.role === 'admin') {
+        res.redirect("/admin"); // Redirect to admin dashboard
     } else {
-        req.flash('error_msg', 'Welcome back');
-        res.render("./users/login.ejs");
+        res.redirect("/"); // Redirect to student page
     }
 });
 
@@ -107,9 +106,8 @@ router.post("/login", async (req, res, next) => {
             if (user.role === 'admin') {
                 res.redirect("/admin"); // Redirect to admin dashboard
             } else {
-                res.redirect("/student"); // Redirect to student page
+                res.redirect("/"); // Redirect to student page
             }
-
             // Send login email notification
             const transporter = nodemailer.createTransport({
                 service: 'gmail',

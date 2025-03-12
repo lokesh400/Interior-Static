@@ -122,4 +122,13 @@ app.get("/admin", async (req,res)=>{
   res.render('admin/adminIndex.ejs');
 })
 
+app.get("/aboutus", (req,res)=>{
+  res.render('aboutUs.ejs');
+})
+
+app.get("/services", (req,res)=>{
+  res.render('services.ejs');
+})
+
+
 app.listen(port, () => console.log(`Server running on http://localhost:${port}`));

@@ -56,18 +56,29 @@
 
 <body class="font-[Poppins]" style="background-color: black;" >
     
+    
     <nav class="bg-black shadow-sm fixed w-full z-50">
         <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo & Brand Name -->
                 <div class="flex items-center space-x-4">
                     <img src="images/logo.jpg" alt="Nostrum Dream Spaces" class="h-12">
                     <span id="brand-name" style="color: goldenrod;" class="text-xl font-bold opacity-0">Nostrum Dream Spaces</span>
                 </div>
+                <button id="menu-btn" class="lg:hidden text-3xl focus:outline-none" style="color: goldenrod;">
+                    ☰
+                </button>
+                <div id="menu" class="hidden absolute top-20 right-4 bg-black text-white w-48 py-4 rounded-lg shadow-lg">
+                    <a href="#" class="block px-4 py-2 hover:text-goldenrod">Home</a>
+                    <a href="#" class="block px-4 py-2 hover:text-goldenrod">Services</a>
+                    <a href="#" class="block px-4 py-2 hover:text-goldenrod">Portfolio</a>
+                    <a href="#" class="block px-4 py-2 hover:text-goldenrod">About</a>
+                    <a href="/add/new/query" class="block px-4 py-2 hover:text-goldenrod">Contact</a>
+                    <a href="/user/login" class="block px-4 py-2 hover:text-goldenrod">Login</a>
+                </div>
             </div>
         </div>
     </nav>
-    
+
 
     <section class="pt-20 relative h-[800px]">
         <div class="absolute inset-0">
@@ -142,6 +153,15 @@
         x: 0,             // Slide from Left to Original Position
         ease: "power2.out", // Smooth Easing
         delay: 1        // Start after 0.5s
+    });
+
+     // Toggle Hamburger Menu
+     const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        gsap.fromTo(menu, { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power2.out" });
     });
 
     </script>

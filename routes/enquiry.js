@@ -112,4 +112,8 @@ router.post("/add/new/query", async (req, res) => {
     }
 });
 
+router.get('/add/new/query', (req,res)=>{
+    res.render('contactUs.ejs')
+})
+
 module.exports = router;

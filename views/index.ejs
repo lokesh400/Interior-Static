@@ -17,7 +17,8 @@
     <script
         src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
     <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000"
-        data-border-radius="small"></script>
+        data-border-radius="small">
+    </script>
        
         <style>
             .whatsapp-button {
@@ -52,7 +53,7 @@
 
 </head>
 
-<body class="font-[Poppins] bg-gray-50">
+<body class="font-[Poppins]" style="background-color: black;" >
     <nav class="bg-white shadow-sm fixed w-full z-50">
         <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
@@ -81,216 +82,46 @@
             <div class="max-w-2xl text-white">
                 <h1 class="font-[Playfair Display] text-6xl font-bold mb-6">Transform Your Space Into A Dream</h1>
                 <p class="text-xl mb-8">Luxury Interior Design Solutions tailored to your lifestyle and preferences</p>
-                <button class="!rounded-button bg-custom text-white px-8 py-4 text-lg hover:bg-custom/90">Book
-                    Consultation</button>
+                <a href="/add/new/query">
+                    <button class="!rounded-button bg-custom text-white px-8 py-4 text-lg hover:bg-custom/90">Book
+                        Consultation
+                    </button>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <section class="py-24" style="background-color: black; color: goldenrod;">
         <%- include('components/ourServices.ejs') %>
     </section>
 
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-[Playfair Display] text-4xl font-bold text-center mb-16">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="./images/project-1.jpg" class="w-full h-64 object-cover" alt="Project 1">
-                    <div class="p-6">
-                        <h3 class="font-semibold text-xl mb-2">Modern Minimalist Haven</h3>
-                        <p class="text-gray-600">A complete transformation of a traditional home into a modern
-                            minimalist retreat.</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="./images/project-2.jpg" class="w-full h-64 object-cover" alt="Project 2">
-                    <div class="p-6">
-                        <h3 class="font-semibold text-xl mb-2">Luxury Dining Experience</h3>
-                        <p class="text-gray-600">Creating an elegant dining space that combines comfort with
-                            sophistication.</p>
-                    </div>
-                </div>
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="./images/project-3.jpg" class="w-full h-64 object-cover" alt="Project 3">
-                    <div class="p-6">
-                        <h3 class="font-semibold text-xl mb-2">Spa-Like Sanctuary</h3>
-                        <p class="text-gray-600">Transforming a basic bathroom into a luxurious spa-like retreat.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+    <section>
+        <%- include('components/ourProjects.ejs') %>
     </section>
 
-    <section class="py-24 bg-white">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <img src="./images/about-img.jpg" class="rounded-lg shadow-lg" alt="Our Team">
-                </div>
-                <div>
-                    <h2 class="font-[Playfair Display] text-4xl font-bold mb-8">About Nostrum Dream Spaces</h2>
-                    <p class="text-gray-600 mb-6">With years of experience in interior design, we've built our
-                        reputation on creating exceptional spaces that reflect our clients' personalities and
-                        lifestyles. Our team of expert designers combines creativity with functionality to deliver
-                        stunning results.</p>
-                    <p class="text-gray-600">We believe that every space has the potential to be extraordinary, and
-                        we're committed to bringing that vision to life through innovative design solutions and
-                        meticulous attention to detail.</p>
-                </div>
-            </div>
-        </div>
+    <section>
+        <%- include('components/aboutUs.ejs') %>
     </section>
 
-    <section class="py-24 bg-gray-50">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="font-[Playfair Display] text-4xl font-bold text-center mb-16">Client Testimonials</h2>
-            <div class="glide">
-                <div class="glide__track" data-glide-el="track">
-                    <div class="glide__slides">
-                        <div class="glide__slide">
-                            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-                                <div class="flex items-center mb-6">
-                                    <img src="https://creatie.ai/ai/api/search-image?query=Professional headshot of a middle-aged woman with a warm smile and business attire against a neutral background.&width=60&height=60&orientation=squarish&flag=d3c983fb-de67-44cc-9a24-1ca10e985713"
-                                        class="w-16 h-16 rounded-full mr-4" alt="Client">
-                                    <div>
-                                        <h4 class="font-semibold">Ram Singh</h4>
-                                        <p class="text-gray-600">Residential Client</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">"Working with Nostrum Dream Spaces was an absolute pleasure.
-                                    They transformed our home into something beyond our imagination while staying within
-                                    our budget."</p>
-                            </div>
-                        </div>
-                        <div class="glide__slide">
-                            <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-                                <div class="flex items-center mb-6">
-                                    <img src="https://creatie.ai/ai/api/search-image?query=Professional headshot of a well-dressed businessman in his 40s with a confident expression against a neutral background.&width=60&height=60&orientation=squarish&flag=dc49bfd3-a0c6-4e88-92d7-563592b198eb"
-                                        class="w-16 h-16 rounded-full mr-4" alt="Client">
-                                    <div>
-                                        <h4 class="font-semibold">Shiv Kumar</h4>
-                                        <p class="text-gray-600">Commercial Client</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600">"The team's attention to detail and professional approach made
-                                    our office renovation project seamless. The results exceeded our expectations."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="glide__bullets" data-glide-el="controls[nav]">
-                    <button class="glide__bullet" data-glide-dir="=0"></button>
-                    <button class="glide__bullet" data-glide-dir="=1"></button>
-                </div>
-            </div>
-        </div>
+    <section>
+        <%- include('components/reviews.ejs') %>
     </section>
 
-    <section class="py-24 bg-white">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="font-[Playfair Display] text-4xl font-bold mb-8">Get in Touch</h2>
-                    <form class="space-y-6" action="/add/new/query" method="POST">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" name="name"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
-                                required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Mobile</label>
-                            <input type="mobile" name="mobile"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
-                                required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" name="email"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="4" name="query"
-                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom"
-                                required></textarea>
-                        </div>
-                        <button type="submit"
-                            class="!rounded-button w-full bg-custom text-white py-3 hover:bg-custom/90">Send
-                            Message</button>
-                    </form>
-                </div>
-                <div>
-                    <div class="bg-gray-50 p-8 rounded-lg">
-                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center">
-                                <i class="fas fa-map-marker-alt text-custom w-6"></i>
-                                <p class="ml-4">Nostrum Dream Spaces, Near Dabchik Nh-19 Hodal,Palwa,Haryanal</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-phone text-custom w-6"></i>
-                                <p class="ml-4">+91 8929930303</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-envelope text-custom w-6"></i>
-                                <p class="ml-4">info@nostrumdreamspaces.com</p>
-                            </div>
-                            <div class="flex items-center">
-                                <i class="fas fa-clock text-custom w-6"></i>
-                                <p class="ml-4">Mon-Fri: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section>
+        <%- include('components/contactUs.ejs') %>
     </section>
+            
 
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-                <div>
-                    <img src="images/logo.jpg" alt="Nostrum Dream Spaces"
-                        class="h-12 mb-6">
-                    <p class="text-gray-400">Creating beautiful spaces that inspire and delight.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Portfolio</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-                        <li><a href="/user/login" class="text-gray-400 hover:text-white">Login</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Connect With Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-pinterest"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="Your email address"
-                            class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-custom focus:border-custom text-white">
-                        <button type="submit"
-                            class="!rounded-button w-full bg-custom text-white py-3 hover:bg-custom/90">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2025 Nostrum Dream Spaces. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <section>
+        <%- include('components/map.ejs') %>
+    </section>
+    
+            <section>
+                <%- include('components/footer.ejs') %>
+            </section>
+            /add/member/newsletter
+    
 
     <a href="https://wa.me/+916006372451" class="whatsapp-button" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
@@ -310,5 +141,4 @@
         }).mount();
     </script>
 </body>
-
 </html>

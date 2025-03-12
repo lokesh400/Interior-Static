@@ -75,10 +75,10 @@ router.post('/signup', async (req, res) => {
 
 // Login route
 router.get("/login", (req, res) => {
-    if (req.user.role === 'admin') {
+    if ( req.user && req.user.role === 'admin') {
         res.redirect("/admin"); // Redirect to admin dashboard
     } else {
-        res.redirect("/"); // Redirect to student page
+        res.render("users/login.ejs"); // Redirect to student page
     }
 });
 

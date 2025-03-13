@@ -107,8 +107,9 @@ router.post("/add/new/query", async (req, res) => {
         console.log(`Enquiry email sent successfully to Admin.`);
         res.redirect('/');
     } catch (error) {
-        console.log(error)
-        res.status(500).json({ message: "error submitting query" });
+        // console.log(error)
+        // res.status(500).json({ message: "error submitting query" });
+        res.redirect('/');
     }
 });
 

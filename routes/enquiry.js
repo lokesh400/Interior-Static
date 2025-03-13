@@ -105,10 +105,10 @@ router.post("/add/new/query", async (req, res) => {
         };
         await transporter.sendMail(mailOptions);
         console.log(`Enquiry email sent successfully to Admin.`);
-        res.status(201).json({ message: "Query submitted successfully." });
+        res.redirect('/');
     } catch (error) {
-        console.error("Error adding query:", error);
-        res.status(500).json({ message: "Internal server error." });
+        console.log(error)
+        res.status(500).json({ message: "error submitting query" });
     }
 });
 
